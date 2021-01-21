@@ -1,0 +1,17 @@
+//la commande pour envoyer post request (login)
+
+curl --header "Content-Type: application/json" --request POST --data "{\"id\":\"322111\",\"password\":\"xyz\"}" http://localhost:8080/login
+
+// post a json file with post
+curl  -H "Content-Type: application/json" --request POST --data "@C:\Projects\Go\test_technique\file.json" http://localhost:8080/add/users
+curl  -H "Content-Type: application/json" --request POST --data "@C:\Projects\Go\test_technique\dataset.json" http://localhost:8080/add/users
+
+//supprimer un utilisateur
+curl --request DELETE http://localhost:8080/delete/user/VERQSd42tN23ZfgZ4kxrwivjRkJsFzacVIgjDczLcTwXvR5es5ofoa2ChUh8aDCJTK6Aeixvy0cB1AmoyrlSGn4GIm3rMH7VUl6mR  
+
+
+//update a user
+    #utilisateur non existant
+curl --header "Content-Type: application/json" --request PUT --data "{\"name\":\"Lee AA\",\"age\":\"45\"}" http://localhost:8080/user/322111
+    #utilisateur deja existant
+curl --header "Content-Type: application/json" --request PUT --data "{\"name\":\"Bowers Carry\",\"age\":20}" http://localhost:8080/user/mAdo98L1nvCzdw4CanEmah8PrPqzFNQmO509HrdKCxcLEcluy1zwm9PLvSIOWhZxDFtnM3rLvjK4cVKVpC0BjYbeU6KpDe14Eh0T
